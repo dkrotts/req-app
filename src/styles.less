@@ -3,10 +3,16 @@
  */
 
 // Variables
-@import '${modules_src}/common/less/variables.less';
+@import '${modules_src}/common/less/variables';
 
 // Reset
-@import '${bower_src}/normalize-less/normalize.less';
+@import '${bower_src}/normalize-less/normalize';
+
+// Global styles & mixins
+@import '${modules_src}/common/less/mixins';
+@import '${modules_src}/common/less/utilities';
+@import '${modules_src}/common/less/scaffolding';
 
 // Module styles
-@import '${modules_src}/home/less/home.less';
+@import '${modules_src}/toc/less/toc';
+@import '${modules_src}/requirements/less/requirements';

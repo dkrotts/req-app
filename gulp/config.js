@@ -18,6 +18,7 @@ config.paths = {
     root: './dist',
     css: './dist/css',
     js: './dist/js',
+    templates: './dist/templates',
     vendor: './dist/js/vendor'
   }
 };

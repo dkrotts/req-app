@@ -8,7 +8,7 @@ gulp.task('default', function () {
   return runSequence(
     'rimraf',
     'vendor',
-    ['index', 'less', 'watchify'],
+    ['index', 'templates', 'less', 'watchify'],
     ['webserver', 'watch']
   );
 });

@@ -6,8 +6,10 @@ var config = require('../config');
 
 gulp.task('watch', function() {
   var indexSrc = config.paths.src.root + '/index.html';
+  var templatesSrc = config.paths.src.root + '/**/*.tpl';
   var lessSrc = config.paths.src.root + '/**/*.less';
 
   gulp.watch(indexSrc, ['index']);
+  gulp.watch(templatesSrc, ['templates']);
   gulp.watch(lessSrc, ['less']);
 });

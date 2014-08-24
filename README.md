@@ -1,7 +1,7 @@
-baldion-seed
-============
+Requirements Application
+========================
 
-Client seed for AngularJs applications
+Application requirements interface
 
 ## License
 

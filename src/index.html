@@ -13,7 +13,7 @@
 <body>
 
 <div class="wrapper">
-  <div class="toc-container" ng-include src="'templates/toc.html'"></div>
+  <div class="toc-container" ng-include src="'templates/toc.html'" ng-controller="TOCCtrl as toc"></div>
 
   <div class="requirements-container" ng-view="main"></div>
 </div>

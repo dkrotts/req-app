@@ -11,7 +11,8 @@ config.paths = {
     root: './src',
     common: './src/common',
     modules: './src/modules',
-    bower: './bower_components'
+    bower: './bower_components',
+    data: './src/data'
   },
 
   dist: {
@@ -55,7 +56,8 @@ config.replacements = [
 config.inject = [
     config.paths.dist.vendor + '/angular.min.js',
     config.paths.dist.vendor + '/angular-animate.min.js',
-    config.paths.dist.vendor + '/angular-route.min.js'
+    config.paths.dist.vendor + '/angular-route.min.js',
+    config.paths.dist.vendor + '/markdown.js'
 ];
 
 module.exports = config;

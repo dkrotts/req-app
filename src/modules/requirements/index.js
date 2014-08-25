@@ -6,12 +6,12 @@ module.exports = angular.module('reqApp.requirements', [])
 
   .directive('requirement', require('./directives/requirement.directive'))
 
-  .service('RequirementsService', require('./services/requirements.service.js'))
+  .service('RequirementsService', require('./services/requirements.service'))
 
   .config(function requirementsConfig($routeProvider) {
 
     $routeProvider
-      .when('/:requirementId?/:sectionId?', {
+      .when('/:secondaryId?/:tertiaryId?', {
         controller: 'RequirementsCtrl',
         controllerAs: 'req',
         templateUrl: 'templates/requirements.html',

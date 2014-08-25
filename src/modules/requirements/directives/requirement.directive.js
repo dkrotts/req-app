@@ -3,7 +3,7 @@
 /**
  * @ngInject
  */
-function requirementDirective() {
+function requirementDirective(RequirementsService) {
 
   var collapseSection = 'Collapse section';
   var expandSection = 'Expand section';
@@ -13,16 +13,27 @@ function requirementDirective() {
   };
 
   var requirementLink = function ($scope, $element, $attrs) {
-    $scope.isOpen = true;
+    $scope.flags = {
+      isOpen: true
+    };
 
-    $scope.elements.twisty.on('click', function() {
-      if ($scope.isOpen === true) {
-        $scope.isOpen = false;
+    RequirementsService.getSection($scope.requirement.id)
+      .then(function (res) {
+        $scope.elements.body.html(res.data);
+      });
+
+    $scope.elements.twisty.on('click', function (e) {
+      e.preventDefault();
+
+      if ($scope.flags.isOpen === true) {
+        $scope.flags.isOpen = false;
         $scope.elements.twisty.attr('title', expandSection);
       } else {
-        $scope.isOpen = true;
+        $scope.flags.isOpen = true;
         $scope.elements.twisty.attr('title', collapseSection);
       }
+
+      $scope.$apply();
     });
 
     $element.on('mouseover', function () {

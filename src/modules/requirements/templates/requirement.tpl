@@ -6,14 +6,14 @@
     </a>
 
     <a href="#" class="requirement-twisty" title="Collapse section" scope-element="twisty">
-      <i class="fa fa-plus-square-o" ng-hide="isOpen"></i>
-      <i class="fa fa-minus-square-o" ng-show="isOpen"></i>
+      <i class="fa fa-plus-square-o" ng-hide="flags.isOpen"></i>
+      <i class="fa fa-minus-square-o" ng-show="flags.isOpen"></i>
     </a>
 
-    <h4 class="requirement-id">{{requirement.id}} - {{requirement.title}}</h4>
+    <h4 class="requirement-id">{{requirement.id}} - {{requirement.name}}</h4>
   </div>
 
-  <div class="requirement-body" ng-show="isOpen">
-    {{requirement.description}}
+  <div class="requirement-body" ng-show="flags.isOpen" scope-element="body">
+
   </div>
 </div>
